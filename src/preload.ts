@@ -1,2 +1,10 @@
-// See the Electron documentation for details on how to use preload scripts:
-// https://www.electronjs.org/docs/latest/tutorial/process-model#preload-scripts
+import { contextBridge, ipcRenderer } from 'electron';
+import { applicationTitleBarActionTypes } from './preloadActions/preloadActionTypes';
+
+const applicationTitleBarAPI: applicationTitleBarActionTypes = {
+   close: () => ipcRenderer.send('close'),
+   maximize: () => ipcRenderer.send('maximize'),
+   hide: () => ipcRenderer.send('hide'),
+};
+
+contextBridge.exposeInMainWorld('applicationTitleBar', applicationTitleBarAPI);

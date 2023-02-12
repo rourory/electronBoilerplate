@@ -1,0 +1,22 @@
+@font-face {
+   font-family: 'MontserraT';
+   src: url('./renderer/fonts/Montserrat-Regular\(400\).ttf');
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: 'MontserraT';
+   src: url('./renderer/fonts/Montserrat-SemiBold\(600\).ttf');
+   font-weight: 600;
+}
+
+@font-face {
+   font-family: 'MontserraT';
+   src: url('./renderer/fonts/Montserrat-ExtraBold\(800\).ttf');
+   font-weight: 800;
+}
+
+body {
+   font-family: 'MontserraT';
+   font-weight: 600;
+}
